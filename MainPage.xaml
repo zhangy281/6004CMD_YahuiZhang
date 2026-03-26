@@ -1,0 +1,62 @@
+﻿<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MyMauiApp.MainPage">
+
+    <Grid Padding="30" RowSpacing="20" ColumnSpacing="20">
+
+        <!-- 定义行 -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- 定义两列 -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- 标题 -->
+        <Label 
+        Text="My First MAUI App"
+        FontSize="30"
+        HorizontalOptions="Center"
+        Grid.Row="0"
+        Grid.ColumnSpan="2"/>
+
+        <!-- 输入框 -->
+        <Entry 
+        Placeholder="Enter your name"
+        Text="{Binding Name}"
+        Grid.Row="1"
+        Grid.ColumnSpan="2"/>
+
+        <!-- Say Hello -->
+        <Button 
+        Text="Say Hello"
+        Clicked="OnHelloClicked"
+        Grid.Row="2"
+        Grid.Column="0"/>
+
+        <!-- Go Second Page -->
+        <Button 
+        Text="Go Second Page"
+        Clicked="OnNextPageClicked"
+        Grid.Row="2"
+        Grid.Column="1"/>
+
+        <!-- 显示结果 -->
+        <Label 
+        Text="{Binding Result}"
+        FontSize="20"
+        HorizontalOptions="Center"
+        Grid.Row="3"
+        Grid.ColumnSpan="2"/>
+
+    </Grid>
+
+</ContentPage>
